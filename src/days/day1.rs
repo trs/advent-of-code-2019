@@ -1,4 +1,4 @@
-use crate::utils;
+use crate::utils::{request, lines};
 
 fn calculate_fuel_amount(fuel: i32) -> i32 {
   (fuel as f32 / 3.0).floor() as i32 - 2
@@ -14,7 +14,8 @@ fn calculate_fuel_amount_with_mass(fuel: i32, sum: i32) -> i32 {
 }
 
 pub fn run() {
-  let modules = utils::request::get("https://adventofcode.com/2019/day/1/input").unwrap();
+  let text = request::get("https://adventofcode.com/2019/day/1/input").unwrap();
+  let modules = lines::parse_lines(text);
 
   // Part 1
   let mut sum = 0;
