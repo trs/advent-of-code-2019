@@ -1,0 +1,48 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Day 1",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=rust",
+          "--package=rust"
+        ],
+        "filter": {
+          "name": "rust",
+          "kind": "bin"
+        }
+      },
+      "args": ["${input:day}"],
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "day",
+      "type": "pickString",
+      "description": "Pick advent day",
+      "options": [
+        {
+          "label": "Day 1",
+          "value": "1"
+        },
+        {
+          "label": "Day 2",
+          "value": "2"
+        },
+        {
+          "label": "Day 3",
+          "value": "3"
+        }
+      ],
+      "default": "3"
+    }
+  ]
+}
