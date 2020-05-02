@@ -13,6 +13,7 @@ mod days {
   pub mod day2;
   pub mod day3;
   pub mod day4;
+  pub mod day5;
 }
 
 fn main() {
@@ -23,6 +24,7 @@ fn main() {
     2 => days::day2::run(),
     3 => days::day3::run(),
     4 => days::day4::run(),
+    5 => days::day5::run(),
     _ => panic!("Expected day as first argument")
   };
 }
