@@ -28,13 +28,13 @@ impl fmt::Debug for Line {
 }
 
 pub fn run() {
-  // let text = request::get("https://adventofcode.com/2019/day/3/input").unwrap();
-  // let wires = lines::parse_lines(text);
+  let text = request::get("https://adventofcode.com/2019/day/3/input").unwrap();
+  let wires = lines::parse_lines(text);
 
-  let wires = vec!(
-    "R75,D30,R83,U83,L12,D49,R71,U7,L72".to_string(),
-    "U62,R66,U55,R34,D71,R55,D58,R83".to_string()
-  );
+  // let wires = vec!(
+  //   "R75,D30,R83,U83,L12,D49,R71,U7,L72".to_string(),
+  //   "U62,R66,U55,R34,D71,R55,D58,R83".to_string()
+  // );
 
   let origin_point = Point {
     x: 0.0,
@@ -45,7 +45,7 @@ pub fn run() {
   let second_lines = get_lines(&wires[1]);
 
   let mut manhattan_distance: Option<f32> = None;
-  let mut combined_steps: f32 = 0.0;
+  // let mut combined_steps: f32 = 0.0;
 
   for l1 in &first_lines {
     for l2 in &second_lines {
